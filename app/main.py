@@ -26,4 +26,5 @@ def get_questions_by_level():
 
 if __name__ == '__main__':
     dataBase = DataBase(r'./db/questions.json')
-    app.run(debug=True, host="0.0.0.0")
+    app.config['JSON_AS_ASCII'] = False
+    app.run(host="0.0.0.0")
